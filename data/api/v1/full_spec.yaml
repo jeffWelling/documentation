@@ -2135,6 +2135,9 @@ components:
           description: Query to filter the event stream with.
           example: ''
           type: string
+        query_version:
+          description: Version of query. Can be either v1 or v2.
+          type: string
         tags_execution:
           description: The execution method for multi-value filters. Can be either
             and or or.
@@ -2171,6 +2174,9 @@ components:
         query:
           description: Query to filter the event timeline with.
           example: ''
+          type: string
+        query_version:
+          description: Version of query. Can be either v1 or v2.
           type: string
         tags_execution:
           description: The execution method for multi-value filters. Can be either
@@ -2327,6 +2333,7 @@ components:
       - security_signals
       - profiles
       - audit
+      - events
       example: logs
       type: string
       x-enum-varnames:
@@ -2337,6 +2344,7 @@ components:
       - SECURITY_SIGNALS
       - PROFILES
       - AUDIT
+      - EVENTS
     FormulaAndFunctionMetricAggregation:
       description: The aggregation methods available for metrics queries.
       enum:
@@ -14020,6 +14028,9 @@ components:
         q:
           description: Query definition.
           example: ''
+          type: string
+        query_version:
+          description: Version of query. Can be either v1 or v2.
           type: string
         tags_execution:
           description: The execution method for multi-value filters.
